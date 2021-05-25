@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Portpholio</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+</head>
+<body>
+	<style type="text/css">
+		#slider img{
+			width:100%;
+			height: 100%; 
+			background-size: cover;
+			background-attachment: fixed;
+		}
+
+		#nav{
+			position: fixed; 
+			top:0px; 
+			z-index: 1; 
+			width: 100%;
+		}
+
+		#headCard{
+			box-shadow: 1px 1px 5px 1px; 
+			border-radius: 2%;
+		}
+
+		#myAchievements {
+			display: flex; 
+			flex-direction: row; 
+			flex-wrap: wrap;
+		}
+
+		#card{
+			width: 18rem; 
+			margin: 15px;
+		}
+
+		#footer{
+			width: 100%; 
+			display: flex;
+			flex-direction: column; 
+			box-shadow: 1px 1px 5px 1px; 
+			padding: 15px;
+			justify-content: space;
+		}
+
+		#contact{
+			display: flex;
+			flex-direction: row;
+			margin: 15px;
+			margin-top: 15px;
+			text-decoration: none; 
+		}
+
+		#contact img{
+			width: 30px;
+			height: 30px;
+			background-size: contain;
+		}
+		
+		#contact:hover{
+			cursor: pointer;
+		}
+
+		#contact a{
+			text-decoration: none; 
+			margin-left: 5px; 
+			color: black
+		}
+
+		#All{
+			margin-top: inherit; 
+			margin-left: 45%; 
+			margin-right: 45%;
+			margin-bottom: 0px;
+		}
+
+		@media screen and (max-width: 1437px){
+			#All{
+				margin-left: 40%; 
+				margin-right: 40%;
+			}
+		}
+
+		@media screen and (max-width: 500px){
+			#All{
+				margin-left: 29%; 
+				margin-right: 29%;
+			}
+		}
+
+		@media screen and (max-width: 365px){
+			#All{
+				margin-left: 24%; 
+				margin-right: 24%;
+			}
+		}
+
+		@media screen and (max-width: 734px){
+			#All{
+				margin-left: 29%; 
+				margin-right: 29%;
+			}
+
+			#footer{
+
+			}
+		}
+
+		@media screen and (max-width: 365px){
+			#All{
+				margin-left: 20%; 
+				margin-right: 20%;
+			}
+		}
+	</style>
+
+	<!-- Хедер -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-dark" id="nav">
+  <div class="container-fluid" >
+    <a class="navbar-brand" href="#">Bogdan Shchabelsky</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="file:///C:/Users/user/Desktop/f.html?">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="#About me">About me</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#footer" tabindex="-1" aria-disabled="true">Contacts</a>
+        </li>
+      </ul>
+
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+
+    </div>
+  </div>
+</nav>
+
+<!-- карусель -->
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner" id="slider">
+
+    <div class="carousel-item active" data-bs-interval="500" id="slider">
+      <img src="https://s3.almamat.com/content/blog/posts/python/shutterstock_1447245065.jpg" class="d-block w-100" alt="...">
+    </div>
+
+    <div class="carousel-item" data-bs-interval="500" id="slider">
+      <img src="https://hsto.org/webt/bw/sc/8n/bwsc8np51ystvqsvlchcn-ukvwi.jpeg" class="d-block w-100" alt="...">
+    </div>
+
+    <div class="carousel-item" id="slider">
+      <img src="https://hsto.org/getpro/habr/post_images/ad4/3ed/e4f/ad43ede4f14d49f187e03b1a4953c742.jpg" class="d-block w-100" alt="...">
+    </div>
+
+    <div class="carousel-item" id="slider">
+      <img src="https://images2.programmersought.com/438/3c/3c42915ec8b9a16712f71258a789cb06.JPEG" class="d-block w-100" alt="...">
+    </div>
+
+  </div>
+
+<!-- картки -->
+<div>
+
+	<div class="card text-center" id="About me">
+	  <div class="card-body" id="headCard">
+
+	    <h5 class="card-title">I like to program</h5>
+	    <img style="width: 100%;" src="https://static.tildacdn.com/tild3031-3061-4332-b730-653563383639/photo.png">
+	    <h6 class="card-text">I like programming the most. I like to create games. I have already finished the first level of Python, and I am now finishing the second level of Python. I'm also finishing the first level of html, css <a href="https://codeclub.com.ua/">Code Clube</a>.</h6><!-- Мені подобається така силка -->
+
+	  </div>
+	</div>
+
+	<div id="myAchievements">
+		<div class="card" id="card">
+
+  			<img src="https://i.ytimg.com/vi/rDkYzlWsADk/maxresdefault.jpg" class="card-img-top" alt="...">
+
+  			<div class="card-body">
+
+    			<h5 class="card-title">Python</h5>
+    			<p class="card-text">I like Python. I already know how to create console games on it. I like the pygame module the most, because it creates games on this module.</p>
+    			<a href="https://ittalentedkids.com.ua/python" class="btn btn-primary">Python</a>
+
+  			</div>
+		</div>
+
+		<div class="card" id="card">
+
+  			<img src="https://w7.pngwing.com/pngs/230/514/png-transparent-front-end-web-development-html-css-design-and-build-web-sites-cascading-style-sheets-stage-web-design-text-logo-thumbnail.png" alt="...">
+
+  			<div class="card-body">
+
+    			<h5 class="card-title">html, css</h5>
+    			<p class="card-text">I really like html, css, because I like creating sites more. And I really want to thank Anna Lichtman.</p>
+    			<a href="https://codeclub.com.ua/about.html#programs-wrapper" class="btn btn-primary">html, css</a>
+
+  			</div>
+		</div>
+	</div>
+
+	<footer id="footer">
+
+		<a href="tel:+380 99 565 6578">
+			<div id="contact">
+				<img src="https://i.pinimg.com/originals/ee/13/61/ee136142b121dcbe766e14b83aece152.png">
+				<a href="tel:+380 99 565 6578"> <p>+380 99 565 65XX</p> </a>
+			</div>
+		</a>
+
+		<a href="mailto:bogdeneb@gmail.com">
+			<div id="contact">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAdVBMVEX///8AAAAeHh7h4eH7+/tNTU1cXFz39/cLCwsEBATc3Nytra3AwMAkJCRvb287Ozvr6+stLS3x8fEqKioSEhKzs7OLi4uFhYWdnZ3S0tJISEiYmJhgYGAaGhrY2Nh4eHhAQEBTU1MzMzO6urqlpaV7e3txcXGcA9ktAAADYUlEQVR4nO2b22KqMBBFCXcQESwqIlbU6v9/4tHW0wQy5EIS7EP2IxVmEbIM4NRxbGxsbGxsbP5eosIzlCLiVy+ueVcuXSNZll1+LZjlvV0ZI6OJLztvfOzrj8Rs+WeS8mvkShSt4bP/nzgHr4MXzHD6P0nOAEFxnqv8M+F6WN+/z3b+zyQ7fwCwqeasj1CV9euvu3nrI9T0L8JiJgFw4mvvGyAg/pS4TWgkjUvOs5CcBamL/1Btvcg3kijdETPNTckpiK9A9TWcnxrj17hQ7xrcMFjHXi0UU6xwpZrYHhKTI9ibq78nv21PeLvfkPNzWQss21MSHZZknTO+1lEPAMXt+IqpkDTsux7g8/QD1M9lo30m+otyUITwkAJA1UnzXCxy6rueCYCSLmMcTjrZil7r2AAIHbfUkjk1690RKMADQIkuIffwrQ4XQJOQA/mkAB5CpoxDC2UonxyAspC0fLIAqLorCAnIxwOozsMRUxCSlq9qMREM4H4uPoaoE4UE5Cs3xJ3HCIDnfIZD7klC0vI9p7QnAOCsD+5gV3khAfnc5zGEAB70DUQvEVq+1ygKAjjFjpq+EkIC8lWveSQK4PjZijqGqJCAfKvsVU0Y4PHRfKKQtHwxXtwlAJxokpCgfHgGywA4U4SE5cORA5AWcky+yQCSQo7KpwAgISRDPhUAYSFZ8ikBCArJlE8RQEBIjnyqAFwhefKpAzCF5MunAYAhpIB8WgBGhBSSTw8ALKSQfJoAICGpgPJpA4CE7AeWTx8AJCR5+twbN3UASMjfnfm3rhoAICG/I3TzrgUAEpItn24ASEimfNoBKCE58hkA6AvJk88EACGkzFOTToCHkN+roNRzo1aAxyDUeV5LPTRqBnjsKvdx/QCysQAWwAJYAAtgASyABbAAfxXg/Lv1qPxLJTspfp3XEje0uIUj1vqjOR2iXeZGbCaaWFpD/Rs/ifBY95pYrkR3TW2yjWdLFCLH2iPeNFan1Fgj0514pF6S050cGZS4XWAkXa+Vq+2N9ObNzWzOuuHvojfB4IXO9c0NjY5/m7elc0u5tg75u+lLC7xRm7GtNmnBV1rFfa7G5tvIG8VocZmjtfuyGP+29w4X483tB/aCX2Tbxlx7f7DNBF5ovvcfHGxsbGxsbGxmzz9mAEgQaJKFsgAAAABJRU5ErkJggg==">
+				<a href="mailto:bogdeneb@gmail.com"> <p>bogdeneb@gmail.com</p> </a>
+			</div>
+		</a>
+
+		<p id="All">ⒸAll rights reserved</p>
+	</footer>
+</body>
+</html>
